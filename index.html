@@ -5,13 +5,175 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- displays site properly based on user's device -->
-
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
     <title>Frontend Mentor | Huddle landing page with alternating feature blocks</title>
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        
+        .landing {
+            background: url(images/bg-hero-desktop.svg), hsl(193, 100%, 96%);
+            padding: 0 2.5em;
+        }
+        
+        .logo-trial {
+            display: flex;
+            justify-content: space-between;
+            padding: 2.5em 0;
+        }
+        
+        .btn {
+            background: white;
+            border: none;
+            padding: 1em 3em;
+            border-radius: 20px;
+            cursor: pointer;
+            box-shadow: 1px 1px 2px grey;
+        }
+        
+        .content {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 50% 50%;
+            margin-bottom: 2em;
+        }
+        
+        .title {
+            padding-top: 2em;
+            font-size: 2rem;
+            font-weight: 700;
+            line-height: 3rem;
+            color: hsl(192, 100%, 9%);
+        }
+        
+        .description {
+            padding-top: 1.125em;
+            font-size: 1.2rem;
+            font-weight: 500;
+            padding-bottom: 1.5em;
+            color: hsl(208, 11%, 55%);
+        }
+        
+        .btn-pink {
+            background: rgb(226, 132, 148);
+            border: none;
+            padding: 1em 3em;
+            border-radius: 20px;
+            cursor: pointer;
+            box-shadow: 1px 1px 2px grey;
+            color: white;
+        }
+        
+        .feat {
+            margin: 3em 3em 0 3em;
+            padding: 2em 2.5em;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .cards {
+            box-shadow: 0 0 1.65px grey;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-radius: 10px;
+        }
+        
+        .grow-together {
+            max-width: 100%;
+            padding: 0 3em;
+            display: grid;
+            grid-template-columns: 50% 50%;
+            padding: 2em;
+            margin-bottom: 2em;
+        }
+        
+        .flowing-conversation {
+            max-width: 100%;
+            padding: 0 3em;
+            display: grid;
+            grid-template-columns: 50% 50%;
+            padding: 2em;
+            margin-bottom: 2em;
+        }
+        
+        .your-users {
+            max-width: 100%;
+            padding: 0 3em;
+            display: grid;
+            grid-template-columns: 50% 50%;
+            padding: 2em;
+            margin-bottom: 2em;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .pop-up {
+            margin: 0 20em;
+            padding: 0 0 3em 0;
+            position: relative;
+            z-index: 1;
+        }
+        
+        footer {
+            background: hsl(192, 100%, 9%);
+            color: white;
+            display: flex;
+            line-height: 1.8em;
+            justify-content: space-between;
+        }
+        
+        .logo {
+            padding-top: 2em;
+        }
+        
+        .sec-1 {
+            margin: 0 3em;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .sec-1 i {
+            padding: 1.2em;
+        }
+        
+        .location {
+            display: flex;
+        }
+        
+        .contact {
+            display: flex;
+        }
+        
+        .mailing {
+            display: flex;
+        }
+        
+        .sec-2 {
+            margin-left: 3.5em;
+            margin-top: 5em;
+        }
+        
+        .sec-3 {
+            margin-left: 3em;
+            margin-top: 5em;
+        }
+        
+        .sec-4 {
+            margin-right: 3em;
+            margin-top: 2em;
+        }
+        
         .attribution {
             font-size: 11px;
             text-align: center;
@@ -27,37 +189,90 @@
     <main class="container">
         <section class="landing">
             <div class="logo-trial">
-                <img src="" alt="" class="logo">
-                <button class="btn"></button>
+                <img src="images/logo.svg" alt="logo">
+                <button class="btn">Try It Free</button>
             </div>
             <div class="content">
-                <h1 class="title"></h1>
-                <p class="description"></p>
-                <img src="" alt="" class="content">
+                <div class="info">
+                    <h1 class="title">Build The Community<br/>Your Fans Will Love </h1>
+                    <p class="description">
+                        Huddle re-imagines the way we build communities.You have <br/> a voice, but so does your audience. Create connections with <br/> your users as you engage in genuine discussion.
+                    </p>
+                    <button class="btn-pink">Get Started For Free</button>
+                </div>
+                <img src="images/illustration-mockups.svg" alt="content" class="content">
             </div>
         </section>
-        <section class="features">
-            <div class="grow-together">
 
+        <section class="feat">
+            <div class=" cards grow-together">
+                <div class="intro">
+                    <h2 class="title"> Grow Together</h2>
+                    <p class="description"> Generate meaningful discussions with your audience and build a strong, loyal community. Think of the insightful conversations you miss out on with a feedback form.</p>
+                </div>
+                <img src="images/illustration-grow-together.svg" alt="grow-together">
             </div>
-            <div class="flowing-conversation">
-
+            <div class="cards flowing-conversation">
+                <img src="images/illustration-flowing-conversation.svg" alt="flowing-conversation">
+                <div class="convo">
+                    <h2 class="title">Flowing Conversations</h2>
+                    <p class="description">You wouldn't paginate a conversation in real life, so why do it online? Our threads have just-in-time loading for a more natural flow.</p>
+                </div>
             </div>
-            <div class="your-users">
-
+            <div class="cards your-users">
+                <div class="yours">
+                    <h2 class="title">Your Users </h2>
+                    <p class="description"> It takes no time at all to integrate Huddle with your app's authentication solution. This means, once signed in to your app, your users can start chatting immediately.</p>
+                </div>
+                <img src="images/illustration-your-users.svg" alt="your-users">
             </div>
         </section>
+
+        <div class="cards pop-up">
+            <h1 class="title"> Ready To Build Your Community?</h1>
+            <button class="btn-pink">Get Started For Free</button>
+        </div>
     </main>
-    Try It Free Build The Community Your Fans Will Love Huddle re-imagines the way we build communities. You have a voice, but so does your audience. Create connections with your users as you engage in genuine discussion. Get Started For Free Grow Together
-    Generate meaningful discussions with your audience and build a strong, loyal community. Think of the insightful conversations you miss out on with a feedback form. Flowing Conversations You wouldn't paginate a conversation in real life, so why do
-    it online? Our threads have just-in-time loading for a more natural flow. Your Users It takes no time at all to integrate Huddle with your app's authentication solution. This means, once signed in to your app, your users can start chatting immediately.
-    Ready To Build Your Community? Get Started For Free Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua +1-543-123-4567 example@huddle.com About Us What We Do FAQ Career Blog Contact
-    Us &copy; Copyright 2018 Huddle. All rights reserved.
 
     <footer>
+        <div class="sec-1">
+            <img src="images/footer-logo.svg" alt="logo" class="logo">
+            <div class="location">
+                <i class="fas fa-map-marker-alt"></i>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br> sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+                </p>
+            </div>
+            <div class="contact">
+                <i class="fas fa-phone-alt"></i>
+                <p class="phone">
+                    +1-543-123-4567
+                </p>
+            </div>
+            <div class="mailing">
+                <i class="fas fa-envelope-square"></i>
+                <p class="email">example@huddle.com</p>
+            </div>
+        </div>
+        <div class="sec-2">
+            <p>About Us</p>
+            <p>What We Do </p>
+            <p>FAQ</p>
+        </div>
+        <div class="sec-3">
+            <p>Career</p>
+            <p>Blog</p>
+            <p>Contact Us</p>
+        </div>
+        <div class="sec-4">
+            <a href="#" class="fab fa-facebook"></a>
+            <a href="#" class="fab fa-instagram"></a>
+            <a href="#" class="fab fa-twitter-square"></a>
+        </div>
+        <!-- &copy; Copyright 2018 Huddle. All rights reserved.
         <p class="attribution">
             Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="#">Your Name Here</a>.
-        </p>
+        </p> -->
     </footer>
 </body>
 
